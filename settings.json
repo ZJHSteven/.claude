@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:\\Windows\\System32\\cmd.exe /c \"C:\\Program Files\\AutoHotkey\\v2\\AutoHotkey64.exe\" \"C:\\Users\\ZJHSteven\\.claude\\hooks\\send_bark_stop.ahk\""
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:\\Windows\\System32\\cmd.exe /c \"C:\\Program Files\\AutoHotkey\\v2\\AutoHotkey64.exe\" \"C:\\Users\\ZJHSteven\\.claude\\hooks\\send_bark_notification.ahk\""
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [],
+    "deny": []
+  }
+}
