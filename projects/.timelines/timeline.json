@@ -1,0 +1,8 @@
+{
+  "sessionId": "",
+  "rootNode": null,
+  "currentCheckpointId": null,
+  "autoCheckpointEnabled": false,
+  "checkpointStrategy": "smart",
+  "totalCheckpoints": 0
+}

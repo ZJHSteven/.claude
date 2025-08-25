@@ -1,0 +1,22 @@
+[
+  {
+    "content": "搜索项目中所有涉及环境变量的文件和配置",
+    "status": "in_progress",
+    "activeForm": "搜索项目中所有涉及环境变量的文件和配置"
+  },
+  {
+    "content": "分析和理清各个环境变量的含义和用法",
+    "status": "pending",
+    "activeForm": "分析和理清各个环境变量的含义和用法"
+  },
+  {
+    "content": "更新所有相关文件中的环境变量配置",
+    "status": "pending",
+    "activeForm": "更新所有相关文件中的环境变量配置"
+  },
+  {
+    "content": "生成合适的用户TOKEN并配置环境变量",
+    "status": "pending",
+    "activeForm": "生成合适的用户TOKEN并配置环境变量"
+  }
+]
