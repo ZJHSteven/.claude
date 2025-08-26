@@ -1,0 +1,26 @@
+# Claude Code 聊天记录和临时文件
+# 排除这些文件，仅保留hooks、设置和系统提示词
+
+# 聊天记录项目文件
+projects/
+*.jsonl
+
+# Todo文件（聊天相关的任务列表）  
+todos/
+
+# Statsig统计数据
+statsig/
+
+# Shell快照文件
+shell-snapshots/
+
+# IDE临时文件
+ide/
+
+# 锁文件
+*.lock
+
+# 保留重要配置文件（这些行是注释，实际不会被忽略）
+# 保留：hooks/ - 自定义钩子脚本
+# 保留：CLAUDE.md - 系统提示词和用户指令
+# 保留：.gitignore - 本文件

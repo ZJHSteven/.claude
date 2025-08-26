@@ -11,10 +11,30 @@ Body := "Claude Code 正在等待您的下一步指示，请查看并回复。"
 ; URL 格式: https://api.day.app/{device_id}/{title}/{body}
 NotificationURL := BarkURL . "/" . Title . "/" . Body
 
-; 使用系统浏览器发送 GET 请求到 Bark API
-; 这会触发 Bark 应用推送通知到您的设备
-; v2 语法：Run 函数需要括号，不需要 % 前缀
-Run(NotificationURL)
+; 使用 WinHTTP 发送 GET 请求到 Bark API，避免调用浏览器
+; 这样可以在后台静默发送通知，不会打开浏览器界面
+try {
+    ; v2.0 语法：创建 WinHTTP 请求对象
+    http := ComObject("WinHttp.WinHttpRequest.5.1")
+    
+    ; 配置请求：GET 方法，目标URL，异步=false（同步请求）
+    http.Open("GET", NotificationURL, false)
+    
+    ; 设置请求头（可选，但建议设置用户代理）
+    http.SetRequestHeader("User-Agent", "Claude-Code-Hook/1.0")
+    
+    ; 发送请求（GET请求无需请求体）
+    http.Send()
+    
+    ; 可选：检查响应状态（200表示成功）
+    if (http.Status == 200) {
+        ; 通知发送成功（可在此添加日志记录）
+        ; 静默处理，不显示任何界面
+    }
+} catch Error as e {
+    ; 发生错误时的处理（可在此添加错误日志）
+    ; 静默处理错误，不显示弹窗
+}
 
 ; 脚本执行完毕后自动退出
 ExitApp()
