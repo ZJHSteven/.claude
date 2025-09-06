@@ -14,3 +14,5 @@
 - 现有历史以中文描述性信息为主，未统一前缀；自本指南起推荐采用 Conventional Commits：`feat|fix|docs|test|refactor|chore(scope): message`。
   - 示例：`feat(core): 添加碰撞检测终止时刻求解器`、`docs: 补充竞赛解题思路总览`。
 - PR 要求：清晰描述意图与影响范围；链接相关 issue；必要时附运行与测试截图/日志；勾选自检清单（构建通过、测试通过、无多余文件）。
+
+- 每次进行提交和更改、创新文件之后，都要更新 Claude.md 文档，确保文档处于最新的状态
